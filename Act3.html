@@ -1,0 +1,376 @@
+<!--
+1. Use Table Tag
+2. Use colspan and rowspan
+3. add image
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Lab 3 - Periodic Table</title>
+    <link rel="icon" type="image/x-icon" href="galaxy.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        background: url(https://cdn.pixabay.com/animation/2023/03/19/02/34/02-34-11-741_512.gif);
+        background-repeat: no-repeat;
+        background-size: cover;
+        animation: fadeIn 0.4s ease;
+    }
+
+    header {
+        width: 97.3%;
+        height: 80px;
+        background: linear-gradient(90deg, #0d1b2a, #1b263b);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        font-size: 28px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        padding: 0 20px;
+        z-index: 10;
+    }
+
+    div.header-home {
+        position: absolute;
+        left: 40px;
+        font-size: 22px;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    div.header-home:hover {
+        transform: scale(1.3);
+    }
+
+    div.header-title {
+        font-size: 30px;
+        font-weight: bold;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+        white-space: nowrap;
+    }
+
+    div.header-links {
+        position: absolute;
+        right: 30px;
+        display: flex;
+        gap: 20px;
+    }
+
+    div.header-links a {
+        color: white;
+        font-size: 16px;
+        text-decoration: none;
+        transition: color 0.3s;
+        cursor: pointer;
+    }
+
+    div.header-links a:hover {
+        color: #ffe;
+        text-decoration: underline;
+    }
+
+    a.dev {
+        border-right: 2px solid #ccc;
+        padding-right: 20px;
+        margin-right: 10px;
+    }
+    .table-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        margin-left: 600px;
+    }
+
+    table {
+        transform: scale(0.7);
+        transform-origin: top left;
+        border-collapse: collapse;
+
+    }
+    td, th {
+        padding: 4px;
+        text-align: center;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        header {
+            height: auto;
+            padding: 16px;
+            flex-direction: column;
+        }
+
+        div.header-title {
+            position: static;
+            transform: none;
+            text-align: center;
+            font-size: 24px;
+            margin-top: 8px;
+        }
+
+        div.header-home,
+        div.header-links {
+            position: static;
+            transform: none;
+            margin-top: 8px;
+        }
+
+        div.header-links {
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        a.dev {
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+    }
+</style>
+
+</head>
+
+<body>
+    	<main>
+	<header>
+		<div class="header-home">
+			<a href="index.html"><img src="home.png" alt="Logo" style="height: 50px; width: 50px;"></a>
+		</div>
+		<div class="header-title">Lab 3 - Table</div>
+		<div class="header-links"> <a class="dev" href="dev.html">About the Developer</a> 
+            <a href="contact.html">Contact Us</a> </div>
+	</header>
+	<br>
+		<center> <font size="10" style="font-family: Arial, sans-serif; font-style: italic; color:white;">
+            Periodic Table of Elements<br><br>
+        </font> </center>
+        <div class="table-container">
+		<table border="2" align="center" width="90%" height="110%" style="border: 7px solid white; border-radius: 10px;">
+			<tr>
+			<th style="border-radius: 7px;"><font size="6" weight="bold" color="white">1</th>
+            <th style="border-radius: 7px;"><font size = "6" weight = "bold" color = "white">2</th>
+            <th style="border-radius: 7px;"><font size = "6" weight = "bold" color = "white">3</th>
+            <th style="border-radius: 7px;"><font size = "6" weight = "bold" color = "white">4</th>
+            <th style="border-radius: 7px;"><font size = "6" weight = "bold" color = "white">5</th>
+            <th style="border-radius: 7px;"><font size = "6" weight = "bold" color = "white">6</th>
+            <th style="border-radius: 7px;"><font size = "6" weight = "bold" color = "white">7</th>
+            <th style="border-radius: 7px;"><font size = "6" weight = "bold" color = "white">8</th>
+            <th style="border-radius: 7px;"><font size = "6" weight = "bold" color = "white">9</th>
+            <th style="border-radius: 7px;"><font size = "6" weight = "bold" color = "white">10</th>
+            <th style="border-radius: 7px;"><font size = "6" weight = "bold" color = "white">11</th>
+            <th style="border-radius: 7px;"><font size = "6" weight = "bold" color = "white">12</th>
+            <th style="border-radius: 7px;"><font size = "6" weight = "bold" color = "white">13</th>
+            <th style="border-radius: 7px;"><font size = "6" weight = "bold" color = "white">14</th>
+            <th style="border-radius: 7px;"><font size = "6" weight = "bold" color = "white">15</th>
+            <th style="border-radius: 7px;"><font size = "6" weight = "bold" color = "white">16</th>
+            <th style="border-radius: 7px;"><font size = "6" weight = "bold" color = "white">17</th>
+            <th style="border-radius: 7px;"><font size = "6" weight = "bold" color = "white">18</th>
+            </font> </tr>
+			<tr>
+				<td align="center" bgcolor="lightgreen" style="border-radius: 7px;">1
+					<br><font size="8" weight="bold">H<br></font><font color="red">Hydrogen</font>
+					<br>1.0008
+					<br>1</td>
+				<td style="border-style: none; border-radius: 7px;"></td>
+				<td colspan="15" style="border-style: none; border-radius: 7px;"><img src="https://www.flipscience.ph/wp-content/uploads/2019/01/M2U2-Fig2.13-Hydrogen-.png"></td>
+				<td align="center" bgcolor="pink" style="border-radius: 7px;" style="border-radius: 7px;">2
+					<br><font size="8" weight="bold">He<br></font><font color="red">Helium</font>
+					<br>4.0026
+					<br>2</td>
+			</tr>
+			<tr>
+				<td align="center" bgcolor="#FF3131" style="border-radius: 7px;"><font color=w hite>3<br><font size = "8" weight = "bold">Li<br></font>Lithium
+					<br>6.94
+					<br>2-1</font>
+				</td>
+				<td align="center" bgcolor="gold" style="border-radius: 7px;">4
+					<br><font size="8" weight="bold">Be<br></font>Berylium
+					<br>9.0122
+					<br>2-2</td>
+				<td colspan="10" style="border-style: none;"></td>
+				<td align="center" bgcolor="yellow" style="border-radius: 7px;">5
+					<br><font size="8" weight="bold">B<br></font>Boron
+					<br>10.81
+					<br>2-3</td>
+				<td align="center" bgcolor="#DAF7A6" style="border-radius: 7px;">6
+					<br><font size="8" weight="bold">C<br></font>Carbon
+					<br>12.011
+					<br>2-4</td>
+				<td align="center" bgcolor="#DAF7A6" style="border-radius: 7px;">7
+					<br><font size="8" weight="bold">N<br></font><font color="red">Nitrogen</font>
+					<br>14.007
+					<br>2-5</td>
+				<td align="center" bgcolor="#DAF7A6" style="border-radius: 7px;">8
+					<br><font size="8" weight="bold">O<br></font><font color="red">Oxygen</font>
+					<br>15.999
+					<br>2-6</td>
+				<td align="center" bgcolor="#DAF7A6" style="border-radius: 7px;">9
+					<br><font size="8" weight="bold">F<br></font><font color="red">Flourine</font>
+					<br>18.998
+					<br>2-7</td>
+				<td align="center" bgcolor="pink" style="border-radius: 7px;">10
+					<br><font size="8" weight="bold">Ne<br></font><font color="red">Neon</font>
+					<br>20.180
+					<br>2-8</td>
+			</tr>
+			<tr>
+				<td align="center" bgcolor="#FF3131" style="border-radius: 7px;"><font color=w hite>11<br><font size = "8" weight = "bold">Na<br></font>Sodium
+					<br>22.98976928
+					<br>2-8-1</td>
+				<td align="center" bgcolor="gold" style="border-radius: 7px;"><font color=w hite></font>12
+					<br><font size="8" weight="bold">Mg<br></font>Magnesium
+					<br>24.305
+					<br>2-8-2</td>
+				<td colspan="10" style="border-style: none; border-radius: 7px;" "></td> 
+            <td align="center " bgcolor = "#E0B0FF " style="border-radius: 7px; ">13<br><font size = "8 " weight = "bold ">Al<br></font>Aluminium<br>26.982<br>2-8-3</td> 
+            <td align="center " bgcolor = "yellow " style="border-radius: 7px; ">14<br><font size = "8 " weight = "bold ">Si<br></font>Silicon<br>28.085<br>2-8-4</td> 
+            <td align="center " bgcolor = "#DAF7A6 " style="border-radius: 7px; ">15<br><font size = "8 " weight = "bold ">P<br></font>Phosphorus<br>30.974<br>2-8-5</td> 
+            <td align="center " bgcolor = "#DAF7A6 " style="border-radius: 7px; ">16<br><font size = "8 " weight = "bold ">S<br></font>Sulfur<br>32.06<br>2-8-6</td> 
+            <td align="center " bgcolor = "#DAF7A6 " style="border-radius: 7px; ">17<br><font size = "8 " weight = "bold ">Cl<br></font><font color = "red ">Chlorine</font><br>35.45<br>2-8-7</td> 
+            <td align="center " bgcolor = "pink ">18<br style="border-radius: 7px; "><font size = "8 " weight = "bold ">Ar<br></font><font color = "red ">Argon</font><br>39.948<br>2-8-8</td> 
+        </tr>
+        <tr>
+            <td align="center " bgcolor = "#FF3131 " style="border-radius: 7px; "><font color = white>19<br><font size = "8 " weight = "bold ">K<br></font>Potassium<br>39.0983<br>2-8-8-1</td> 
+            <td align="center " bgcolor = "gold " style="border-radius: 7px; ">20<br><font size = "8 " weight = "bold ">Ca<br></font>Calcium<br>40.078<br>2-8-8-2</td> 
+            <td align="center " bgcolor = "#ADD8E6 " style="border-radius: 7px; ">21<br><font size = "8 " weight = "bold ">Sc<br></font>Scandium<br>44.955908<br>2-8-9-2</td> 
+            <td align="center " bgcolor = "#ADD8E6 " style="border-radius: 7px; ">22<br><font size = "8 " weight = "bold ">Ti<br></font>Titanium<br>47.867<br>2-8-10-2</td> 
+            <td align="center " bgcolor = "#ADD8E6 " style="border-radius: 7px; ">23<br><font size = "8 " weight = "bold ">V<br></font>Vanadium<br>50.9415<br>2-8-11-2</td> 
+            <td align="center " bgcolor = "#ADD8E6 " style="border-radius: 7px; ">24<br><font size = "8 " weight = "bold ">Cr<br></font>Chromium<br>51.9961<br>2-8-13-1</td>
+            <td align="center " bgcolor = "#ADD8E6 " style="border-radius: 7px; ">25<br><font size = "8 " weight = "bold ">Mn<br></font>Manganese<br>54.938044<br>2-8-13-2</td>
+            <td align="center " bgcolor = "#ADD8E6 " style="border-radius: 7px; ">26<br><font size = "8 " weight = "bold ">Fe<br></font>Iron<br>55.845<br>2-8-14-2</td>
+            <td align="center " bgcolor = "#ADD8E6 " style="border-radius: 7px; ">27<br><font size = "8 " weight = "bold ">Co<br></font>Cobalt<br>58.933<br>2-8-15-2</td>
+            <td align="center " bgcolor = "#ADD8E6 " style="border-radius: 7px; ">28<br><font size = "8 " weight = "bold ">Ni<br></font>Nickel<br>58.693<br>2-8-16-2</td>
+            <td align="center " bgcolor = "#ADD8E6 " style="border-radius: 7px; ">29<br><font size = "8 " weight = "bold ">Cu<br></font>Copper<br>63.546<br>2-8-18-1</td>
+            <td align="center " bgcolor = "#E0B0FF " style="border-radius: 7px; ">30<br><font size = "8 " weight = "bold ">Zn<br></font>Zinc<br>65.38<br>2-8-18-2</td>
+            <td align="center " bgcolor = "#E0B0FF " style="border-radius: 7px; ">31<br><font size = "8 " weight = "bold ">Ga<br></font>Gallium<br>69.723<br>2-8-18-3</td> 
+            <td align="center " bgcolor = "yellow " style="border-radius: 7px; ">32<br><font size = "8 " weight = "bold ">Ge<br></font>Germanium<br>72.630<br>2-8-18-4</td>
+            <td align="center " bgcolor = "yellow " style="border-radius: 7px; ">33<br><font size = "8 " weight = "bold ">As<br></font>Arsenic<br>74.922<br>2-8-18-5</td> 
+            <td align="center " bgcolor = "#DAF7A6 " style="border-radius: 7px; ">34<br><font size = "8 " weight = "bold ">Se<br></font>Selenium<br>78.971<br>2-8-18-6</td>
+            <td align="center " bgcolor = "#DAF7A6 " style="border-radius: 7px; ">35<br><font size = "8 " weight = "bold ">Br<br></font><font color = "blue ">Bromine</font><br>79.904<br>2-8-18-7</td> 
+            <td align="center " bgcolor = "pink " style="border-radius: 7px; ">36<br><font size = "8 " weight = "bold ">Kr<br></font><font color = "red ">Krypton</font><br>83.798<br>2-8-18-8</td> 
+        </tr>
+        <tr>
+            <td align="center " bgcolor = "#FF3131 " style="border-radius: 7px; "><font color = white>37<br><font size="8 " weight="bold ">Rb<br></font>Rubidium<br>85.4678<br>2-8-18-8-1</td>
+            <td align="center " bgcolor = "gold " style="border-radius: 7px; ">38<br><font size="8 " weight="bold ">Sr<br></font>Strontium<br>87.62<br>2-8-18-8-2</td>
+            <td align="center " bgcolor = "#ADD8E6 " style="border-radius: 7px; ">39<br><font size="8 " weight="bold ">Y<br></font>Yttrium<br>88.90584<br>2-8-18-9-2</td>
+            <td align="center " bgcolor = "#ADD8E6 " style="border-radius: 7px; ">40<br><font size="8 " weight="bold ">Zr<br></font>Zirconium<br>91.224<br>2-8-18-10-2</td>
+            <td align="center " bgcolor = "#ADD8E6 " style="border-radius: 7px; ">41<br><font size="8 " weight="bold ">Nb<br></font>Niobium<br>92.90637<br>2-8-18-12-1</td>
+            <td align="center " bgcolor = "#ADD8E6 " style="border-radius: 7px; ">42<br><font size="8 " weight="bold ">Mo<br></font>Molybdenum<br>95.95<br>2-8-18-13-1</td>
+            <td align="center " bgcolor = "#ADD8E6 " style="border-radius: 7px; ">43<br><font size="8 " weight="bold ">Tc<br></font>Technetium<br>98<br>2-8-18-13-2</td>
+            <td align="center " bgcolor = "#ADD8E6 " style="border-radius: 7px; ">44<br><font size="8 " weight="bold ">Ru<br></font>Ruthenium<br>101.07<br>2-8-18-15-1</td>
+            <td align="center " bgcolor = "#ADD8E6 " style="border-radius: 7px; ">45<br><font size="8 " weight="bold ">Rh<br></font>Rhodium<br>102.91<br>2-8-18-16-1</td>
+            <td align="center " bgcolor = "#ADD8E6 " style="border-radius: 7px; ">46<br><font size="8 " weight="bold ">Pd<br></font>Palladium<br>106.42<br>2-8-18-18</td>
+            <td align="center " bgcolor = "#ADD8E6 " style="border-radius: 7px; ">47<br><font size="8 " weight="bold ">Ag<br></font>Silver<br>107.87<br>2-8-18-18-1</td>
+            <td align="center " bgcolor = "#E0B0FF " style="border-radius: 7px; ">48<br><font size="8 " weight="bold ">Cd<br></font>Cadmium<br>112.41<br>2-8-18-18-2</td>
+            <td align="center " bgcolor = "#E0B0FF " style="border-radius: 7px; ">49<br><font size="8 " weight="bold ">In<br></font>Indium<br>114.82<br>2-8-18-18-3</td>
+            <td align="center " bgcolor = "#E0B0FF " style="border-radius: 7px; ">50<br><font size="8 " weight="bold ">Sn<br></font>Tin<br>118.71<br>2-8-18-18-4</td>
+            <td align="center " bgcolor = "yellow " style="border-radius: 7px; ">51<br><font size="8 " weight="bold ">Sb<br></font>Antimony<br>121.76<br>2-8-18-18-5</td>
+            <td align="center " bgcolor = "yellow " style="border-radius: 7px; ">52<br><font size="8 " weight="bold ">Te<br></font>Tellurium<br>127.60<br>2-8-18-18-6</td>
+            <td align="center " bgcolor = "#DAF7A6 " style="border-radius: 7px; ">53<br><font size="8 " weight="bold ">I<br></font>Iodine<br>126.90<br>2-8-18-18-7</td>
+            <td align="center " bgcolor = "pink " style="border-radius: 7px; ">54<br><font size="8 " weight="bold ">Xe<br></font><font color="red ">Xenon</font><br>131.29<br>2-8-18-18-8</td>
+        </tr>
+        <tr>
+            <td align="center " bgcolor = "#FF3131 " style="border-radius: 7px; "><font color = white>55<br><font size="8 " weight="bold ">Cs<br></font>Cesium<br>132.91<br>2-8-18-18-8-1</td>
+            <td align="center " bgcolor = "gold " style="border-radius: 7px; ">56<br><font size="8 " weight="bold ">Ba<br></font>Barium<br>137.33<br>2-8-18-18-8-2</td>
+            <td align="center " bgcolor = "#6495ED " style="border-radius: 7px; "><font color = "white ">57~71<br><font size="5 " weight="bold " color = "white ">Lanthanides</font></td>
+            <td align="center " bgcolor = "#ADD8E6 " style="border-radius: 7px; ">72<br><font size="8 " weight="bold ">Hf<br></font>Hafnium<br>178.49<br>2-8-18-32-10-2</td>
+            <td align="center " bgcolor = "#ADD8E6 " style="border-radius: 7px; ">73<br><font size="8 " weight="bold ">Ta<br></font>Tantalum<br>180.95<br>2-8-18-32-11-2</td>
+            <td align="center " bgcolor = "#ADD8E6 " style="border-radius: 7px; ">74<br><font size="8 " weight="bold ">W<br></font>Tungsten<br>183.84<br>2-8-18-32-12-2</td>
+            <td align="center " bgcolor = "#ADD8E6 " style="border-radius: 7px; ">75<br><font size="8 " weight="bold ">Re<br></font>Rhenium<br>186.21<br>2-8-18-32-13-2</td>
+            <td align="center " bgcolor = "#ADD8E6 " style="border-radius: 7px; ">76<br><font size="8 " weight="bold ">Os<br></font>Osmium<br>190.23<br>2-8-18-32-14-2</td>
+            <td align="center " bgcolor = "#ADD8E6 " style="border-radius: 7px; ">77<br><font size="8 " weight="bold ">Ir<br></font>Iridium<br>192.22<br>2-8-18-32-15-2</td>
+            <td align="center " bgcolor = "#ADD8E6 " style="border-radius: 7px; ">78<br><font size="8 " weight="bold ">Pt<br></font>Platinum<br>195.08<br>2-8-18-32-17-1</td>
+            <td align="center " bgcolor = "#ADD8E6 " style="border-radius: 7px; ">79<br><font size="8 " weight="bold ">Au<br></font>Gold<br>196.97<br>2-8-18-32-18-1</td>
+            <td align="center " bgcolor = "#E0B0FF " style="border-radius: 7px; ">80<br><font size="8 " weight="bold ">Hg<br></font><font color = "blue ">Mercury</font><br>200.59<br>2-8-18-32-18-2</td>
+            <td align="center " bgcolor = "#E0B0FF " style="border-radius: 7px; ">81<br><font size="8 " weight="bold ">Tl<br></font>Thallium<br>204.38<br>2-8-18-32-18-3</td>
+            <td align="center " bgcolor = "#E0B0FF " style="border-radius: 7px; ">82<br><font size="8 " weight="bold ">Pb<br></font>Lead<br>207.2<br>2-8-18-32-18-4</td>
+            <td align="center " bgcolor = "#E0B0FF " style="border-radius: 7px; ">83<br><font size="8 " weight="bold ">Bi<br></font>Bismuth<br>208.98<br>2-8-18-32-18-5</td>
+            <td align="center " bgcolor = "#E0B0FF " style="border-radius: 7px; ">84<br><font size="8 " weight="bold ">Po<br></font>Polonium<br>209<br>2-8-18-32-18-6</td>
+            <td align="center " bgcolor = "yellow " style="border-radius: 7px; ">85<br><font size="8 " weight="bold ">At<br></font>Astatine<br>210<br>2-8-18-32-18-7</td>
+            <td align="center " bgcolor = "pink " style="border-radius: 7px; ">86<br><font size="8 " weight="bold ">Rn<br></font><font color="red ">Radon</font><br>222<br>2-8-18-32-18-8</td>
+        </tr>
+        <tr>
+            <td align="center " bgcolor = "#FF3131 " style="border-radius: 7px; "><font color = white>87<br><font size="8 " weight="bold ">Fr<br></font>Francium<br>[223]<br>2-8-18-32-18-8-1</td>
+            <td align="center " bgcolor = "gold " style="border-radius: 7px; ">88<br><font size="8 " weight="bold ">Ra<br></font>Radium<br>[226]<br>2-8-18-32-18-8-2</td>
+            <td align="center " bgcolor = "#7DF9FF " style="border-radius: 7px; ">89~103<br><font size="5 " weight="bold ">Actinides</font></td>
+            <td align="center " bgcolor = "#ADD8E6 " style="border-radius: 7px; ">104<br><font size="8 " weight="bold ">Rf<br></font><font color = "grey ">Rutherfordium<br></font>[267]<br>2-8-18-32-32-10-2</td>
+            <td align="center " bgcolor = "#ADD8E6 " style="border-radius: 7px; ">105<br><font size="8 " weight="bold ">Db<br></font><font color = "grey ">Dubnium<br></font>[270]<br>2-8-18-32-32-11-2</td>
+            <td align="center " bgcolor = "#ADD8E6 " style="border-radius: 7px; ">106<br><font size="8 " weight="bold ">Sg<br></font><font color = "grey ">Seaborgium<br></font>[271]<br>2-8-18-32-32-12-2</td>
+            <td align="center " bgcolor = "#ADD8E6 " style="border-radius: 7px; ">107<br><font size="8 " weight="bold ">Bh<br></font><font color = "grey ">Bohrium<br></font>[270]<br>2-8-18-32-32-13-2</td>
+            <td align="center " bgcolor = "#ADD8E6 " style="border-radius: 7px; ">108<br><font size="8 " weight="bold ">Hs<br></font><font color = "grey ">Hassium<br></font>[277]<br>2-8-18-32-32-14-2</td>
+            <td align="center " bgcolor = "#F0E68C " style="border-radius: 7px; ">109<br><font size="8 " weight="bold ">Mt<br></font><font color = "grey ">Meitnerium<br></font>[278]<br>2-8-18-32-32-15-2</td>
+            <td align="center " bgcolor = "#F0E68C " style="border-radius: 7px; ">110<br><font size="8 " weight="bold ">Ds<br></font><font color = "grey ">Darmstadtium<br></font>[281]<br>2-8-18-32-32-17-1</td>
+            <td align="center " bgcolor = "#F0E68C " style="border-radius: 7px; ">111<br><font size="8 " weight="bold ">Rg<br></font><font color = "grey ">Roentgenium<br></font>[282]<br>2-8-18-32-32-18-1</td>
+            <td align="center " bgcolor = "#E0B0FF " style="border-radius: 7px; ">112<br><font size="8 " weight="bold ">Cn<br></font><font color = "grey ">Copernicium<br></font>[285]<br>2-8-18-32-32-18-2</td>
+            <td align="center " bgcolor = "#F0E68C " style="border-radius: 7px; ">113<br><font size="8 " weight="bold ">Nh<br></font><font color = "grey ">Nihonium<br></font>[286]<br>2-8-18-32-32-18-3</td>
+            <td align="center " bgcolor = "#F0E68C " style="border-radius: 7px; ">114<br><font size="8 " weight="bold ">Fl<br></font><font color = "grey ">Flerovium<br></font>[289]<br>2-8-18-32-32-18-4</td>
+            <td align="center " bgcolor = "#F0E68C " style="border-radius: 7px; ">115<br><font size="8 " weight="bold ">Mc<br></font><font color = "grey ">Moscovium<br></font>[290]<br>2-8-18-32-32-18-5</td>
+            <td align="center " bgcolor = "#F0E68C " style="border-radius: 7px; ">116<br><font size="8 " weight="bold ">Lv<br></font><font color = "grey ">Livermorium<br></font>[293]<br>2-8-18-32-32-18-6</td>
+            <td align="center " bgcolor = "#F0E68C " style="border-radius: 7px; ">117<br><font size="8 " weight="bold ">Ts<br></font><font color = "grey ">Tennessine<br></font>[294]<br>2-8-18-32-32-18-7</td>
+            <td align="center " bgcolor = "#F0E68C " style="border-radius: 7px; ">118<br><font size="8 " weight="bold ">Og<br></font><font color = "grey ">Oganesson<br></font>[294]<br>2-8-18-32-32-18-8</td>
+        </tr>
+        <tr height = "100em ">
+
+        </tr>
+        <tr>
+            <td colspan = "2 " style="border-style: none; "></td> 
+            <td align="center " bgcolor = "#6495ED " style="border-radius: 7px; ">57<br><font size="8 " weight="bold ">La<br></font>Lanthanum<br>138.90547<br>2-8-18-32-18-9</td>
+            <td align="center " bgcolor = "#6495ED " style="border-radius: 7px; ">58<br><font size="8 " weight="bold ">Ce<br></font>Cerium<br>140.116<br>2-8-18-32-18-10</td>
+            <td align="center " bgcolor = "#6495ED " style="border-radius: 7px; ">59<br><font size="8 " weight="bold ">Pr<br></font>Praseodymium<br>140.90766<br>2-8-18-32-18-11</td>
+            <td align="center " bgcolor = "#6495ED " style="border-radius: 7px; ">60<br><font size="8 " weight="bold ">Nd<br></font>Neodymium<br>144.242<br>2-8-18-32-18-12</td>
+            <td align="center " bgcolor = "#6495ED " style="border-radius: 7px; ">61<br><font size="8 " weight="bold ">Pm<br></font>Promethium<br>145<br>2-8-18-32-18-13</td>
+            <td align="center " bgcolor = "#6495ED " style="border-radius: 7px; ">62<br><font size="8 " weight="bold ">Sm<br></font>Samarium<br>150.36<br>2-8-18-32-18-14</td>
+            <td align="center " bgcolor = "#6495ED " style="border-radius: 7px; ">63<br><font size="8 " weight="bold ">Eu<br></font>Europium<br>151.964<br>2-8-18-32-18-15</td>
+            <td align="center " bgcolor = "#6495ED " style="border-radius: 7px; ">64<br><font size="8 " weight="bold ">Gd<br></font>Gadolinium<br>157.25<br>2-8-18-32-18-16</td>
+            <td align="center " bgcolor = "#6495ED " style="border-radius: 7px; ">65<br><font size="8 " weight="bold ">Tb<br></font>Terbium<br>158.92535<br>2-8-18-32-18-17</td>
+            <td align="center " bgcolor = "#6495ED " style="border-radius: 7px; ">66<br><font size="8 " weight="bold ">Dy<br></font>Dysprosium<br>162.500<br>2-8-18-32-18-18</td>
+            <td align="center " bgcolor = "#6495ED " style="border-radius: 7px; ">67<br><font size="8 " weight="bold ">Ho<br></font>Holmium<br>164.93033<br>2-8-18-32-18-19</td>
+            <td align="center " bgcolor = "#6495ED " style="border-radius: 7px; ">68<br><font size="8 " weight="bold ">Er<br></font>Erbium<br>167.259<br>2-8-18-32-18-20</td>
+            <td align="center " bgcolor = "#6495ED " style="border-radius: 7px; ">69<br><font size="8 " weight="bold ">Tm<br></font>Thulium<br>168.93422<br>2-8-18-32-18-21</td>
+            <td align="center " bgcolor = "#6495ED " style="border-radius: 7px; ">70<br><font size="8 " weight="bold ">Yb<br></font>Ytterbium<br>173.04<br>2-8-18-32-18-22</td>
+            <td align="center " bgcolor = "#6495ED " style="border-radius: 7px; ">71<br><font size="8 " weight="bold ">Lu<br></font>Lutetium<br>175.0<br>2-8-18-32-18-23</td>
+        </tr>
+        <tr>
+            <td colspan="2 " style="border-style: none; "></td>
+            <td align="center " bgcolor = "#7DF9FF " style="border-radius: 7px; ">89<br><font size="8 " weight="bold ">Ac<br></font>Actinium<br>[227]<br>2-8-18-32-18-9-2</td>
+            <td align="center " bgcolor = "#7DF9FF " style="border-radius: 7px; ">90<br><font size="8 " weight="bold ">Th<br></font>Thorium<br>[232.04]<br>2-8-18-32-18-10-2</td>
+            <td align="center " bgcolor = "#7DF9FF " style="border-radius: 7px; ">91<br><font size="8 " weight="bold ">Pa<br></font>Protactinium<br>[231.04]<br>2-8-18-32-20-9-2</td>
+            <td align="center " bgcolor = "#7DF9FF " style="border-radius: 7px; ">92<br><font size="8 " weight="bold ">U<br></font>Uranium<br>[238.03]<br>2-8-18-32-21-9-2</td>
+            <td align="center " bgcolor = "#7DF9FF " style="border-radius: 7px; ">93<br><font size="8 " weight="bold ">Np<br></font>Neptunium<br>[237]<br>2-8-18-32-22-9-2</td>
+            <td align="center " bgcolor = "#7DF9FF " style="border-radius: 7px; ">94<br><font size="8 " weight="bold ">Pu<br></font>Plutonium<br>[244]<br>2-8-18-32-24-8-2</td>
+            <td align="center " bgcolor = "#7DF9FF " style="border-radius: 7px; ">95<br><font size="8 " weight="bold ">Am<br></font>Americium<br>[243]<br>2-8-18-32-25-8-2</td>
+            <td align="center " bgcolor = "#7DF9FF " style="border-radius: 7px; ">96<br><font size="8 " weight="bold ">Cm<br></font>Curium<br>[247]<br>2-8-18-32-25-9-2</td>
+            <td align="center " bgcolor = "#7DF9FF " style="border-radius: 7px; ">97<br><font size="8 " weight="bold ">Bk<br></font>Berkelium<br>[247]<br>2-8-18-32-27-8-2</td>
+            <td align="center " bgcolor = "#7DF9FF " style="border-radius: 7px; ">98<br><font size="8 " weight="bold ">Cf<br></font>Californium<br>[251]<br>2-8-18-32-28-8-2</td>
+            <td align="center " bgcolor = "#7DF9FF " style="border-radius: 7px; ">99<br><font size="8 " weight="bold ">Es<br></font>Einsteinium<br>[252]<br>2-8-18-32-29-8-2</td>
+            <td align="center " bgcolor = "#7DF9FF " style="border-radius: 7px; ">100<br><font size="8 " weight="bold ">Fm<br></font>Fermium<br>[257]<br>2-8-18-32-30-8-2</td>
+            <td align="center " bgcolor = "#7DF9FF " style="border-radius: 7px; ">101<br><font size="8 " weight="bold ">Md<br></font>Mendelevium<br>[258]<br>2-8-18-32-31-8-2</td>
+            <td align="center " bgcolor = "#7DF9FF " style="border-radius: 7px; ">102<br><font size="8 " weight="bold ">No<br></font>Nobelium<br>[259]<br>2-8-18-32-32-8-2</td>
+            <td align="center " bgcolor = "#7DF9FF " style="border-radius: 7px; ">103<br><font size="8 " weight="bold ">Lr<br></font>Lawrencium<br>[266]<br>2-8-18-32-32-8-3</td>
+        </tr>
+    </table>
+        </div>
+</main>
+</body>
+</html>

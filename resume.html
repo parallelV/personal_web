@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="galaxy.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Resume</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin-top: 0;
+      margin-left: 0;
+      margin-right: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Poppins, sans-serif;
+      background-color: #eaeaea;
+      margin: 0px;
+      animation: fadeIn 0.4s ease;
+    }
+
+    #splash {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: #0d1b2a;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      flex-direction: column;
+      z-index: 10000;
+    }
+
+    #progress-container {
+      width: 200px;
+      height: 10px;
+      background-color: #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+      margin: 10px auto 0;
+    }
+
+    #progress-bar {
+      height: 100%;
+      width: 0%;
+      background-color: #00ced1;
+      transition: width 1s linear;
+    }
+
+    header {
+      width: 100%;
+      height: 80px;
+      background: linear-gradient(90deg, #0d1b2a, #1b263b);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    div.header-home {
+      position: absolute;
+      left: 40px;
+    }
+
+    div.header-home:hover {
+      transition: ease-in-out 0.3s;
+      transform: scale(1.3);
+    }
+
+    div.header-title {
+      font-size: 30px;
+      font-weight: bold;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    div.header-links {
+      position: absolute;
+      right: 30px;
+      display: flex;
+      gap: 20px;
+    }
+
+    div.header-links a {
+      color: white;
+      font-size: 16px;
+      text-decoration: none;
+      transition: color 0.3s;
+      cursor: pointer;
+    }
+
+    div.header-links a:hover {
+      color: #ffe;
+      text-decoration: underline;
+    }
+
+    .dev {
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    .contact {
+      margin-top: 7.5px;;
+      border-left: 2px solid #ccc;
+      padding-left: 20px;
+      margin-left: 10px;
+    }
+    .container {
+      display: flex;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .left {
+      width: 37%;
+      background: linear-gradient(to bottom right, #060606, #0556a6, #056af7);
+      color: white;
+      padding: 15px;
+    }
+
+    .left img.pic {
+      border-radius: 10px;
+      border: 3px solid black;
+      margin-bottom: 15px;
+    }
+
+    .left h2 {
+      margin-bottom: 5px;
+    }
+
+    .left h4 {
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    .left ul {
+      padding-left: 18px;
+    }
+
+    .left p {
+      font-size: 13px;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .left a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .left a:hover {
+      text-decoration: underline;
+    }
+
+    .right {
+      width: 63%;
+      background-color: #F2F2F2;
+      padding: 20px;
+    }
+
+    .blue {
+      background-color: #0D3F84;
+      color: white;
+      border-radius: 7px;
+      padding: 10px 15px;
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .skills {
+      color: #0D3F84;
+      font-size: 15px;
+      margin-top: 10px;
+      margin-left: 15px;
+      list-style-type: square;
+    }
+
+    .skills li {
+      margin-bottom: 10px;
+    }
+
+    .skills p {
+      color: #000;
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .left, .right {
+        width: 100%;
+      }
+    }
+    @keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(-10px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-home">
+      <a href="index.html">
+        <img src="home.png" alt="Logo" style="height: 50px; width: 50px;">
+      </a>
+    </div>
+    <div class="header-title">Resume</div>
+    <div class="header-links">
+      <a class="dev" href="dev.html">About the Developer</a>
+      <a class="contact" href="contact.html">Contact Us</a>
+    </div>
+  </header>
+
+  <br>
+  <div class="container">
+    <div class="left">
+      <center>
+        <img src="1x1.jpg" alt="Image" width="160" height="160" class="pic">
+        <h2>John Zyril Paco</h2>
+      </center>
+
+      <h4>About me:</h4>
+      <ul>
+        <li>
+          <p>I am John Zyril Paco, a 1st Year BSIT student specializing in Cybersecurity. I chose this path because it’s less saturated than other IT fields like Software Engineering.</p>
+        </li>
+      </ul>
+
+      <h4>Address:</h4>
+      <ul>  
+        <li><p>257 Martan Street, Commonwealth, Quezon City.</p></li>
+      </ul>
+
+      <h4>Contacts:</h4>
+      <ul>
+        <li>Phone Number:
+          <ul>
+            <li>09472376124</li>
+          </ul>
+        </li>
+        <li>Email:
+          <ul>
+            <li><a href="mailto:zyrilpaco@gmail.com">Gmail</a></li>
+            <li><a href="mailto:zyrilpaco@outlook.com">Outlook</a></li>
+            <li><a href="mailto:202411138@fit.edu.ph.com">Student Email</a></li>
+          </ul>
+        </li>
+        <li>Social Media:
+          <ul>
+            <li><a href="https://www.facebook.com/zyril.missu" target="_blank">Facebook</a></li>
+            <li><a href="https://www.linkedin.com/in/john-zyril-paco" target="_blank">LinkedIn</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="right">
+      <div class="blue">Skills</div>
+      <ul class="skills">
+        <li><p>Web Development</p></li>
+        <li><p>Object-Oriented Programming</p></li>
+        <li><p>Video Editing</p></li>
+        <li><p>Cybersecurity</p></li>
+      </ul>
+
+      <div class="blue">Language Stack</div>
+      <ul class="skills">
+        <li><p>HTML</p></li>
+        <li><p>CSS</p></li>
+        <li><p>JavaScript</p></li>
+        <li><p>Java</p></li>
+        <li><p>C++</p></li>
+      </ul>
+
+      <div class="blue">Experience</div>
+      <ul class="skills">
+        <li><p><strong>Concentrix</strong> – Student Intern</p></li>
+      </ul>
+
+      <div class="blue">Education</div>
+      <ul class="skills">
+        <li><p><strong>Saint Joseph of Unit 5 Learning Center</strong><br>– Pre-school</p></li>
+        <li><p><strong>Flor de Grace Inc.</strong> – Grade School</p></li>
+        <li><p><strong>Commonwealth High School</strong> – High School</p></li>
+        <li><p><strong>FEU Institute of Technology</strong> – Tertiary</p></li>
+      </ul>
+
+      <div class="blue">Achievements</div>
+      <ul class="skills">
+        <li><p><strong>With Honors</strong> – Senior High School</p></li>
+        <li><p><strong>President Scholar</strong> – FEU Institute of University</p></li>
+        <li><p><strong>QCYDO Economic Scholar</strong> – QC Government</p></li>
+        <li><p><strong>UniFAST TDP Scholar</strong> – Commission on Higher Education</p></li>
+        <li><p><strong>Certified Information Technology Specialist in HTML and CSS</strong> - Pearsons VUE</p></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us</title>
+  <link rel="icon" type="image/x-icon" href="galaxy.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #f0f8f8, #e0f7fa);
+      color: #333;
+      animation: fadeIn 0.4s ease;
+    }
+
+    header {
+      width: 100%;
+      height: 80px;
+      background: linear-gradient(90deg, #0d1b2a, #1b263b);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    div.header-home {
+      position: absolute;
+      left: 40px;
+    }
+    div.header-home:hover{
+      transition: ease-in-out 0.3s;
+      transform: scale(1.3);
+    }
+
+    .header-title {
+      font-size: 30px;
+      font-weight: bold;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .header-links {
+      position: absolute;
+      right: 30px;
+      display: flex;
+      gap: 20px;
+    }
+
+    .header-links a {
+      color: white;
+      font-size: 16px;
+      text-decoration: none;
+      transition: color 0.3s;
+      cursor: pointer;
+    }
+
+    .header-links a:hover {
+      color: #ffe;
+      text-decoration: underline;
+    }
+
+    .dev {
+      margin-top: 7.5px;;
+      border-right: 2px solid #ccc;
+      padding-right: 20px;
+      margin-right: 10px;
+    }
+
+    .contact {
+      background-color: #00ced1;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-weight: bold;
+      box-shadow: 0 0 10px rgba(0, 206, 209, 0.6);
+      transition: all 0.3s ease;
+    }
+
+    .contact-form {
+      display: flex;
+      justify-content: center;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .contact-box {
+      background-color: #ffffff;
+      border: 2px solid #4169E1;
+      border-radius: 10px;
+      padding: 20px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-box h3 {
+      margin-bottom: 10px;
+      color: #4169E1;
+    }
+
+    .contact-box textarea, input {
+      width: 100%;
+      padding: 10px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      border: 1px solid #aaa;
+      border-radius: 6px;
+      resize: vertical;
+      margin-bottom: 10px;
+    }
+
+    .contact-box button {
+      padding: 10px 20px;
+      background-color: #4169E1;
+      border: none;
+      color: white;
+      font-size: 14px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .contact-box button:hover {
+      background-color: #27408B;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    #main {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease;
+    }
+
+    #main.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .main {
+      max-width: 1200px;
+      margin: 60px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 0 20px;
+    }
+
+    .main a {
+      text-decoration: none;
+      color: inherit;
+      flex: 1 1 45%;
+      max-width: 500px;
+      transition: transform 0.3s ease;
+    }
+
+    .main a:hover {
+      transform: scale(1.03);
+    }
+
+    .box {
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      border-left: 6px solid #4169E1;
+      border-radius: 15px;
+      padding: 30px 25px;
+      height: 240px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+      transition: all 0.4s ease;
+    }
+
+    .box:hover {
+      background-color: #eef7ff;
+      box-shadow: 0 12px 24px rgba(65, 105, 225, 0.25);
+      border-left-color: #27408B;
+    }
+
+    .box h2 {
+      font-size: 24px;
+      color: #4169E1;
+      margin-bottom: 12px;
+      font-weight: bold;
+    }
+
+    .box p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      font-style: italic;
+    }
+
+    .confirm-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+      animation: fadeIn 0.4s ease;
+
+    }
+
+    .confirm-box {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .confirm-box h3 {
+      margin-bottom: 10px;
+      color: #27408B;
+    }
+
+    .confirm-box p {
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    .confirm-actions button {
+      padding: 8px 18px;
+      margin: 0 10px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .confirm-actions button:disabled {
+      background-color: #ccc;
+      color: #666;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+
+    .confirm-actions button:first-child {
+      background-color: #4169E1;
+      color: white;
+    }
+
+    .confirm-actions button:first-child:hover {
+      background-color: #27408B;
+    }
+
+    .confirm-actions button:last-child {
+      background-color: #ccc;
+    }
+
+    .confirm-actions button:last-child:hover {
+      background-color: #999;
+    }
+
+    .confirm-box input[type="checkbox"] {
+      transform: scale(1.1);
+    }
+    .confirm-box label {
+      font-size: 14px;
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background-color: #f0f8ff;
+      color: #555;
+      font-size: 14px;
+      border-top: 1px solid #ddd;
+      margin-top: 78px;
+    }
+    .error {
+      border: 2px solid red;
+      background-color: #ffe6e6;
+    }
+
+  #splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #4169E1;
+}
+
+  #progress-container {
+    width: 200px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 15px;
+  }
+
+  #progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #00ced1;
+    transition: width 1s linear;
+  }
+
+    @media (max-width: 768px) {
+      .main a {
+        flex: 1 1 90%;
+      }
+
+      .header-title {
+        font-size: 22px;
+        text-align: center;
+        left: 10px;
+        transform: none;
+      }
+
+      .header-links {
+        top: 60px;
+        right: 20px;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="splash">
+    <p>Please wait... <span id="count">3</span></p>
+    <div id="progress-container">
+      <div id="progress-bar"></div>
+    </div>
+  </div>
+
+
+  <div id="main">
+    <header>
+      <div class="header-home">
+          <a href="index.html"><img src="home.png" alt="Logo" style="height: 50px; width: 50px;"></a>
+      </div>
+      <div class="header-title">Leave us a comment!!</div>
+      <div class="header-links">
+        <a class="dev" href="dev.html">About the Developer</a>
+        <a class ="contact" href="#">Contact Us</a>
+      </div>
+    </header>
+
+  <div class="contact-form">
+    <form id="contact-form" class="contact-box" onsubmit="submitMessage(event)">
+      <h3>Name:</h3>
+    <input type="text" id="name" name="name" placeholder="Enter your name"><br>
+      <h3>Email:</h3>
+      <input type="email" id="email" name="email" placeholder="Enter your email"><br>
+      <h3>Got any recommendations? Drop it here.</h3>
+      <textarea id="message" name="message" placeholder="Type your message..." rows="14"></textarea><br>
+      <button type="submit">Submit</button>
+      <p id="feedback" style="color: red; font-weight: bold; margin-top: 10px;"></p>
+    </form>
+  </div>
+
+  <div id="confirm" style="display: none;" class="confirm-overlay">
+    <div class="confirm-box">
+      <h3>Confirm Submission</h3>
+      <p>Do you want to submit this message?</p>
+      <div style="margin: 15px; font-size: 14px;">
+        <input type="checkbox" id="agreeCheckbox" onchange="toggleConfirmButton()" style="vertical-align: middle; margin-right: 6px;">
+        <label for="agreeCheckbox">
+          I agree to the <a href="#" style="color: #4169E1; text-decoration: underline;">terms and conditions</a>
+        </label>
+      </div>
+      <div class="confirm-actions">
+        <button id="confirmBtn" onclick="confirmSubmit(true)" type="submit" disabled>Yes</button>
+        <button onclick="confirmSubmit(false)">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <footer>
+    &copy; 2025 John Zyril A. Paco | All rights reserved.
+  </footer>
+
+<script>
+  let isFormValid = false;
+  let userName = "";
+
+  function submitMessage(event) {
+    event.preventDefault();
+
+    const form = document.getElementById("contact-form");
+    const fields = form.querySelectorAll("input, textarea");
+    isFormValid = true;
+
+    fields.forEach(field => {
+      field.classList.remove("error");
+      field.addEventListener("input", () => {
+        field.classList.remove("error");
+        document.getElementById("feedback").innerText = "";
+      });
+    });
+
+    document.getElementById("feedback").innerText = "";
+
+    for (let i = 0; i < fields.length; i++) {
+      if (fields[i].value.trim() === "") {
+        fields[i].classList.add("error");
+        fields[i].focus();
+        document.getElementById("feedback").innerText = "⚠️ PLEASE FILL OUT ALL FIELDS ⚠️";
+        isFormValid = false;
+        break;
+      }
+    }
+
+    if (!isFormValid) return;
+
+    userName = document.getElementById("name").value.trim();
+    document.getElementById("confirm").style.display = "flex";
+  }
+
+  function toggleConfirmButton() {
+    const checkbox = document.getElementById("agreeCheckbox");
+    const confirmBtn = document.getElementById("confirmBtn");
+    confirmBtn.disabled = !checkbox.checked;
+  }
+
+  function confirmSubmit(confirmed) {
+    const modal = document.getElementById("confirm");
+    modal.style.display = "none";
+
+    if (confirmed) {
+      const form = document.getElementById("contact-form");
+      const formData = new FormData(form);
+
+      const scriptURL = "https://script.google.com/macros/s/AKfycbw3kLTyggZJFVMVugFQ4V0HrMf4v8iKMyaDmLrnjrrNYA3A0tfD4-i4L4IJ8C4Qr4c7NA/exec";
+
+      fetch(scriptURL, {
+        method: "POST",
+        body: formData
+      })
+      .then(response => {
+        if (!response.ok) throw new Error("Network response was not ok");
+        return response.text();
+      })
+      .then(responseText => {
+        alert(`Thank you, ${userName}! Your message has been sent!`);
+
+        const goHome = confirm("Would you like to go to the home page?");
+        if (goHome) {
+          window.location.href = "index.html";
+        } else {
+          form.reset();
+          document.getElementById("agreeCheckbox").checked = false;
+          toggleConfirmButton();
+        }
+      })
+      .catch(error => {
+        console.error("Error!", error);
+        alert("There was an error sending your message. Please try again.");
+      });
+    }
+  }
+
+    let count = 3;
+    const splash = document.getElementById('splash');
+    const main = document.getElementById('main');
+    const countSpan = document.getElementById('count');
+    const progressBar = document.getElementById('progress-bar');
+
+    let progress = 0;
+    const countdown = setInterval(() => {
+        count--;
+        progress += 33.33;
+        countSpan.textContent = count;
+        progressBar.style.width = progress + '%';
+
+        if (count === 0) {
+        clearInterval(countdown);
+        setTimeout(() => {
+            splash.style.display = 'none';
+            main.classList.add('show');
+        }, 500);
+        }
+    }, 1000);
+</script>
+
+
+</body>
+</html>

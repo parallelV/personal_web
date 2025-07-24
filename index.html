@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homepage</title>
+  <link rel="icon" type="image/x-icon" href="galaxy.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="blackhole-overlay">
+    <video autoplay muted playsinline class="blackhole-video" id="blackholeVideo">
+      <source src="trys.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <header>
+    <div class="icon"><button onclick="easterEgg()"><img src="galaxy.png" alt="galaxy icon"></button></div>
+    <div class="header-title">Compilation of Laboratory Coding Activities</div>
+    <div class="header-links">
+      <a class="dev" href="dev.html">About the Developer</a>
+      <a class="contact" href="contact.html">Contact Us</a>
+    </div>
+  </header>
+
+  <div class="upper">
+    <center>
+      <h1 class="upper-mainh1">🎮Welcome to My Compilation of Laboratory Coding Activities🧩</h1>
+      <p class="upper-main">👨🏻‍💻This webpage is a collection of my coding activities from the course <b>IT0043L - Side Scripting <i>Laboratory</i></b>. Each activity demonstrates different HTML, CSS, and JavaScript techniques, from basic text formatting to complex layouts and interactions.💻</p>
+      <p class="upper-main">Click on the boxes below to explore each activity in detail.</p>
+      <button id="manualColorChange" class="dev">🎨Click to start changing color animation.🎨</button>
+    </center>
+  </div>
+
+  <div class="main">
+    <a href="Act2.html">
+      <div class="box" id="box1">
+        <h2>🌍 Activity 1 ✏️</h2><hr>
+        <p>We chose one of the United Nations Sustainable Development Goals and applied different text formatting and lists to create a simple webpage.</p>
+        <div class="progress-container">
+          <div class="progress-bar progress-bar1" data-progress="28">SKILL LEVEL</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="Act3.html">
+      <div class="box" id="box2">
+        <h2>🧪 Activity 2 𝄜</h2><hr>
+        <p>We recreated the Periodic Table using table elements by creatively applying colspan and rowspan for accurate layout.</p>
+        <div class="progress-container">
+          <div class="progress-bar progress-bar2" data-progress="44">SKILL LEVEL</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="Act4.html">
+      <div class="box" id="box3">
+        <h2>📝 Activity 3 📁</h2><hr>
+        <p>This activity made us practice form elements such as inputs, checkboxes, radio buttons, and more in an interactive layout.</p>
+        <div class="progress-container">
+          <div class="progress-bar progress-bar3" data-progress="55">SKILL LEVEL</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="Act5.html">
+      <div class="box" id="box4">
+        <h2>📐 Activity 4 📊</h2><hr>
+        <p>We created a grid-based layout webpage that displays all 17 United Nations Sustainable Development Goals and is visually appealing.</p>
+        <div class="progress-container">
+          <div class="progress-bar progress-bar4" data-progress="78">SKILL LEVEL</div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div id="easter" class="easter-overlay" style="display: none;">
+    <div class="easter-box">
+      <h3>🎉 You found an Easter Egg! 🎉</h3>
+      <p>Congratulations on finding this easter egg in the homepage. Makakakwatro ka this sem foshoo. 😉</p>
+      <div class="easter-actions">
+        <button class="close" onclick="closeEaster()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 John Zyril A. Paco | All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

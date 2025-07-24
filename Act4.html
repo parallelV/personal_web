@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="galaxy.png">
+    <title>Lab 4 - Forms</title>
+</head>
+<script>
+    function Submit(){
+        alert("Successfully Submitted!");
+    }
+</script>
+<body>
+  <header>
+    <div class="header-home">
+      <a href="index.html"><img src="home.png" alt="Logo" style="height: 50px; width: 50px;"></a>
+    </div>
+    <div class="header-title">Lab 4 - Forms</div>
+    <div class="header-links">
+      <a class="dev" href="dev.html">About the Developer</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </header>
+    <main>
+        <form>
+            <Center><h1>United Nation's Registration</h1><br></Center>
+            <label for="name">Full Name: </label>
+            <input type="text" name = "name" size="25" placeholder="John Doe" required>
+            <br><br><br>
+            <label for="email">Email: </label>
+            <input type="email" name = "email" placeholder="202312345@fit.edu.ph" size="30" required>
+            <br><br><br>
+            <label for="age">Age: </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="number" name = "age" required>
+            <br><br><br>
+            <label for = "gender">Gender: </label>&nbsp;&nbsp;
+            <select>
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+                <option value="3">Bisexual</option>
+                <option value="4">LGBTQIA+</option>
+                <option value="5">Transgender</option>
+                <option value="6">Nonbinary</option>
+                <option value="7">Agender</option>
+                <option value="8">Cisgender</option>
+                <option value="9">Bigender</option>
+                <option value="10">Others</option>
+                </select>   
+            <br><br><br>
+            <b><h3>UN's Sustainable Development Goals:</h3>
+                <input type="checkbox" name = "sdg" value = "1">1. No Poverty<br>
+                <input type="checkbox" name = "sdg" value = "2">2. Zero Hunger<br>
+                <input type="checkbox" name = "sdg" value = "3">3. Good Health and Well-being<br>
+                <input type="checkbox" name = "sdg" value = "4">4. Quality Education<br>
+                <input type="checkbox" name = "sdg" value = "5">5. Gender Equality<br>
+                <input type="checkbox" name = "sdg" value = "6">6. Clean Water and Sanitation<br>
+                <input type="checkbox" name = "sdg" value = "7">7. Affordable and Clean Energy<br>
+                <input type="checkbox" name = "sdg" value = "8">8. Decent Work and Economic Growth<br>
+                <input type="checkbox" name = "sdg" value = "9">9. Industry, Innovation and Infrastructure<br>
+                <input type="checkbox" name = "sdg" value = "10">10. Reduced Inequalities<br>
+                <input type="checkbox" name = "sdg" value = "11">11. Sustainable Cities and Communities<br>
+                <input type="checkbox" name = "sdg" value = "12">12. Responsible Consumption and Production<br>
+                <input type="checkbox" name = "sdg" value = "13">13. Climate Action<br>
+                <input type="checkbox" name = "sdg" value = "14">14. Life Below Water<br>
+                <input type="checkbox" name = "sdg" value = "15">15. Life on Land<br>
+                <input type="checkbox" name = "sdg" value = "16">16. Peace, Justice and Strong Institutions<br>
+                <input type="checkbox" name = "sdg" value = "17">17. Partnerships for the Goals<br>
+                <br><br><br><br>
+            </b>
+            <center>
+                <input class = "submit" type="button" value="SUBMIT" onclick="Submit()">  
+            </center>
+        </form>
+    </main>
+</body>
+</html>
